@@ -18,14 +18,15 @@ client.on("message", async message =>{
 /* Client when detects 
 a new member join */
 client.on("guildMemberAdd", async member => {
-  let channel = member.guild.channels.cache.find(c => c.name === 'welcome')
+  let channel = member.guild.channels.cache.find(c => c.name === 'channel name')
   let WELCOME = new Discord.MessageEmbed()
-  .setTitle('New User Has Joined!')
+  .setTitle('Hello')
   .setDescription(`Welcome To Our Server ${member.user} we are happy to have you! you are member number ${member.guild.memberCount}!`)
-  .setColor('BLUE')
+  .setColor('RANDOM')
   .setThumbnail(client.user.avatarURL)
   .setTimestamp()
-  .setFooter('Thanks For Joining!')
+  .setImage("Image Or Gif")
+  .setFooter('Welcome!')
   channel.send(WELCOME)
 })
-client.login("BOTTOKENHERE"); // Login with the token make sure to add it when starting
+client.login("Bot Token"); // Login with the token make sure to add it when starting
